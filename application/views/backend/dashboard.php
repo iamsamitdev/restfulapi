@@ -26,13 +26,14 @@
         		$('#load_province').click(function(){
         			//console.log('ok click load provine button');
         			$.ajax({ 
-				url: 'http://localhost/restfulapi/api/v1/provinces',
+				url: 'https://itgenius.co.th/restfulapi/api/v1/provinces',
 				async: true,
 				type:'GET',
-				dataType: 'json',
+				//dataType: 'json',
+				dataType: 'jsonp', // Cross Domain
 				contentType: 'application/json',
 				beforeSend: function(xhr) {
-					// xhr.setRequestHeader("Authorization", "Basic "+btoa(username+':'+password));
+					//xhr.setRequestHeader("Authorization", "Basic "+btoa('samit'+':'+'smk377040'));
 					xhr.setRequestHeader("Authorization", "Basic c2FtaXQ6c21rMzc3MDQw");
 				},
 				success: function(data){
