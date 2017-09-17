@@ -27,6 +27,7 @@
         			//console.log('ok click load provine button');
         			$.ajax({ 
 				url: 'https://itgenius.co.th/restfulapi/api/v1/provinces',
+				//url:'http://localhost/restfulapi/api/v1/provinces',
 				async: true,
 				type:'GET',
 				//dataType: 'json',
@@ -34,7 +35,7 @@
 				contentType: 'application/json',
 				beforeSend: function(xhr) {
 					//xhr.setRequestHeader("Authorization", "Basic "+btoa('samit'+':'+'smk377040'));
-					xhr.setRequestHeader("Authorization", "Basic c2FtaXQ6c21rMzc3MDQw");
+					xhr.setRequestHeader("Authorization", "Basic <?php echo $glob_basic_auth_hash; ?>");
 				},
 				success: function(data){
 				 	//console.log(data);
